@@ -1,0 +1,15 @@
+body{
+    background-color: bisque;
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-top:30px;
+    font-size: large;
+
+}
+
+H1{
+    background-color: darkgray;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
