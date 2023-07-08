@@ -8,8 +8,22 @@ body{
 }
 
 H1{
+    color: cornsilk;
     background-color: darkgray;
     text-align: center;
     padding-top: 30px;
     padding-bottom: 20px;
+}
+legend
+{
+    font-weight: bold;
+    color: blue;
+}
+li{
+    font-weight: bold;
+}
+#personalizado
+{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
 }
