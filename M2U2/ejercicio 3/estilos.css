@@ -1,0 +1,26 @@
+.contenedor{
+    display: flex;
+    background-color: aqua;
+    border: 5px solid black; 
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+.itemGeneral{
+    font-size: large;
+    color: cornsilk;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+}
+.itemRojo{
+    background-color: red;
+}
+.itemAzul{
+    background-color: blue;
+}
+.itemVerde{
+    background-color: green;
+}
