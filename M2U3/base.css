@@ -30,6 +30,7 @@ section {
 	float: left;
 	margin: 0 0 0 25px;
 	width: 400px;
+
 }
 aside {
 	background: #CCC59E;
@@ -40,22 +41,28 @@ aside {
 	#contenedor {
 		display: flex;
 		flex-direction: column;
-
+		padding: 5px;
+		width: auto;
 	}
 	aside{
-		width: 100%;
+		width: auto;
 		padding-left: 15px;
+		padding-right: 15px;
+		flex-wrap: wrap;
+		float: right;
 	}
 	nav{
-		width: 100%;
+		width: auto;
 		background: orange;
 		padding-left: 15px;
+		padding-right: 15px;
 		line-height: 40px;
 	}
 	section{
-		width: 100%;
+		width: auto;
 		margin: 0 0 0 0px;
 		padding-left: 15px;
+		padding-right: 15px;
 	}
 	a {
 		color:#13130f;
