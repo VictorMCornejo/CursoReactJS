@@ -1,0 +1,68 @@
+.contenedor{
+    display: grid;
+    gap: 10px;
+    margin: 20px;
+    padding: 20px;
+    grid-template-areas: 
+        "header"
+        "main"
+        "aside"
+        "footer";
+}
+html{
+    height: 100%;
+}
+body{
+    background-color: aqua;
+}
+header{
+    padding: 20px;
+    background-color: white;
+    grid-area: header;
+}
+aside{
+    grid-area: aside;
+    background-color: cornflowerblue;
+    float: right;
+    position: relative;
+    padding: 5px;
+}
+footer{
+    grid-area: footer;
+    color: white;
+    background-color: rgb(136, 197, 218);
+    bottom: 0px;
+    width: 100%;
+    padding: 5PX;
+    margin: 5px;
+}
+section{
+    background-color: darkgreen;
+    float: left;
+}
+.carousel{
+    width: 800;
+    height: 700px;
+}
+main{
+    grid-area: main;
+    height: auto;
+}
+.imagenBanner{
+    width: 650PX;
+    height: 760px;
+}
+.logo{
+    align-content: flex-start;
+}
+@media screen and (min-width: 900px){
+    .contenedor{
+        grid-template: 
+            "header header" 100px
+            "main aside" auto
+            "footer footer" 120px/
+            auto 150px;
+    }
+
+}
+
