@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>DISTANCIAS</title>
+</head>
+
+<body>
+  <form name="formulario">
+    	Ingrese un valor:
+    	<input type="text" name="num"/>  
+    	<input type="button" value="ENVIAR" onclick="transporte()"/> 
+  </form>  
+  
+  
+  <script>
+   
+    function transporte()
+    {
+ 		console.log("Funcion ejecutada");
+		let valor=parseInt(document.formulario.num.value);
+
+    	
+		console.log(valor);
+
+
+		if(valor<=1000)
+		{
+			alert(`Hacer los ${valor} Km a PIE`);
+
+		}
+		else if(valor>1000 && valor<=10000)
+		{
+			alert(`Hacer los ${valor} Km en BICICLETA`);
+		}
+		else if(valor>10000 && valor<=30000)
+		{
+			alert(`Hacer los ${valor} Km en COLECTIVO`);
+		}
+		else if(valor>30000 && valor<=100000)
+		{
+			alert(`Hacer los ${valor} Km en AUTO`);
+		}
+		else 
+		{
+			alert(`Hacer los ${valor} Km en AVION`);
+		}                      
+    }
+    
+  </script>  
+ 
+  
+</body>
+
+</html>

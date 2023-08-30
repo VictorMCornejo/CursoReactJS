@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>MAXIMO</title>
+</head>
+<body>
+    <script>
+			let max=0;
+      		let num=[]
+      		let cadena="";
+      		const nrosPrueba=5;
+      
+      		for(let i=0;i<nrosPrueba;i++)
+            {
+                                      
+                                num[i]=parseInt(prompt(`ingrese el ${i+1}� numero`,''));
+                                if(num[i]>max){
+      									            max=num[i];
+                                  }     
+                                cadena+=num[i];
+      							            if(i<nrosPrueba-2){
+                                    cadena+=", ";
+                                }      
+                                else if(i<nrosPrueba-1){
+      								              cadena+=" y ";
+                                }                    			
+            }
+      
+      <!-- MENSAJES -->
+      		  alert(`Ingresaste: ${cadena}. El maximo es: ${max}`);    
+     		    document.write(`Ingresaste: ${cadena}. El maximo es: ${max}`);
+     		    console.log(`Ingresaste: ${cadena}. El maximo es: ${max}`);
+    </script>
+  
+  
+
+</body>
+
+</html>

@@ -55,10 +55,17 @@ main{
 .logo{
     align-content: flex-start;
 }
+nav{
+    color: lightcoral;
+}
+#logo{
+    width: 100%;
+    height: auto;
+}
 @media screen and (min-width: 900px){
     .contenedor{
         grid-template: 
-            "header header" 100px
+            "header header" auto
             "main aside" auto
             "footer footer" 120px/
             auto 150px;
