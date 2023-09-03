@@ -1,0 +1,21 @@
+body{
+    display: flex;
+}
+div{
+    height: 70px;
+    width: 70px;
+    padding: 10px;
+    text-align: center;
+    border: black solid 2px;
+    color: white;
+    margin: 0 auto;
+}
+div:nth-child(1){
+    background-color: red;
+}
+div:nth-child(2){
+    background-color: green;
+}
+div:nth-child(3){
+    background-color: blue;
+}

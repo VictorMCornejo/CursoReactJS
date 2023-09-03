@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprobados</title>
+</head>
+<body>
+    <h1>Listado de alumnos aprobados</h1>
+    <input type="button" onclick="aprobados()" value="Consultar">
+    <p id="resultado"></p>
+
+    <script>
+        function aprobados(){
+       
+            let alumnos = [
+                {
+                    nombre: 'Juan Gomez',
+                    nota: 7
+                },
+                {
+                    nombre: 'Pedro Rodriguez',
+                    nota: 4
+                },
+                {
+                    nombre: 'Roxana García',
+                    nota: 8
+                },
+                {
+                    nombre: 'Luciano Lopez',
+                    nota: 5
+                },
+                {
+                    nombre: 'Fernanda Gimenez',
+                    nota: 6
+                },
+                {
+                    nombre: 'Florencia Martinez',
+                    nota: 10
+                },
+                {
+                    nombre: 'Raul Sanchez',
+                    nota: 7
+                },
+                {
+                    nombre: 'Sandra Figueroa',
+                    nota: 8
+                }
+                ];
+
+                let cantAlumnos = alumnos.length;
+                let resultado="";
+                console.log(`${cantAlumnos} alumnos en total de los cuales aprobaron: `);
+                resultado=`${cantAlumnos} alumnos en total de los cuales aprobaron: <br>`;
+
+                for(let i=0;i<cantAlumnos;i++)
+                {
+                    
+                    if(alumnos[i].nota>=7){
+                        resultado+=`<br>${alumnos[i].nombre} aprobado con ${alumnos[i].nota}`;
+                        console.log(`${alumnos[i].nombre} / ${alumnos[i].nota}`);
+                    }    
+
+                }
+                document.getElementById('resultado').innerHTML=resultado;
+
+        }
+    </script>
+
+</body>
+</html>

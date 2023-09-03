@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de caracteres de textArea</title>
+</head>
+<body>
+    <!-- Programar un contador de caracteres para un textarea. -->
+
+    <!-- onkeyup: evento al soltar tecla  -->
+    <h1>Contador de caracteres</h1>
+    <textarea name="comentarios" id="comentarios" cols="30" rows="10"  onkeyup="contador();"></textarea> 
+
+    <p id="respuesta"> </p>
+    
+   
+    <script>
+        function contador(){
+            setTimeout(function(){  /* ejecuta funcion segun tiempo determinado. Puede declararse sin valor */
+                let cadena=document.getElementById('comentarios');
+                let cantCaracteres=cadena.value.length; /* cuento los caracteres del textarea (largo de la cadena)*/
+                
+                document.getElementById('respuesta').innerHTML = `usaste ${cantCaracteres} caracteres`;
+            })
+        }
+
+    </script>
+    
+</body>
+</html>
