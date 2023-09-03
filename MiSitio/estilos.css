@@ -1,0 +1,422 @@
+
+*{
+    box-sizing: border-box;
+}
+.flex{
+    display:flex;
+    justify-content: space-between;
+}
+.btn{
+    display:flex;
+    border: solid 2px;
+    border-radius: 50px;
+    padding: 5px;
+    width: max-content;
+    margin: 0 auto;
+}
+.opcion .btn{
+    display: flex;
+}
+.contenedor{
+    display: grid;
+    gap: 5px;
+    grid-template:
+        "header header header" 100px
+        "nav nav nav" 45px
+        "portada portada portada" 600px
+        "main main aside" auto
+        "footer footer footer" 200px/
+        40% 40% 15%;
+
+    justify-content: center;
+    padding: 10px;
+}
+.contenedor-galeria{
+    display: grid;
+    gap: 5px;
+    grid-template:
+        "header header header" 100px
+        "nav nav nav" 45px
+        "portada portada portada" 600px
+        "main main main" auto
+        "footer footer footer" 200px/
+        40% 40% 15%;
+
+    justify-content: center;
+    padding: 10px;
+
+}
+.header{
+    background-color:rgb(175, 176, 180);
+    grid-area: header;
+    padding: 3px;
+}
+.nav{
+    background-color: rgb(99, 119, 156);
+    grid-area: nav;
+    align-content: center;
+
+}
+.portada{
+    grid-area: portada;
+    background: url(img/portada01.jpg) no-repeat;
+    width: 100%;
+
+}
+
+.main{
+    background-color:  rgb(175, 176, 180);
+    grid-area: main;
+    padding: 10px;
+    margin: 30px 0px;
+    
+}
+
+.aside{
+    background-color: rgb(175, 176, 180);
+    grid-area: aside;
+    padding: 20px;
+    margin: 30px 0px;
+}
+footer{
+    grid-area: footer;
+}
+
+/* ************************************************* INICIO NAV *************************************************** */
+
+.nav ul{
+    display: flex;
+    list-style-type: none; /* quitar viñeta */
+    align-content: center;
+    justify-content: space-evenly;
+    text-decoration: none;
+
+}
+.nav a{
+    text-decoration: none;
+    color:white;
+}
+.nav a:hover{
+    opacity: 0.5;
+    font-weight: bolder;
+    color: black;
+}
+/* ************************************************ FIN NAV **************************************************** */
+
+/* ********************************************* INICIO FOOTER ************************************************* */
+
+.contenedorWidget{
+    display: flex;
+    flex-direction: row;
+    height: 100%; /* ocupa el 100% del footer en altura */
+    justify-content: space-evenly;
+}
+
+.nav-footer a, li, ul{
+    list-style-type: none;
+    text-decoration: none;
+    color: white;
+}
+
+.widget-footer1{
+     background-color: rgba(5, 5, 5, 0.884);
+     color: white;
+     width: 100%;
+     padding: 15px;
+}
+.widget-footer2 {
+    padding: 15px;
+    width: 100%;
+    line-height: 30px;
+    background-color: rgb(36, 37, 36);
+    color: white;
+}
+.widget-footer3{
+    width: 100%;
+    line-height: 20px;
+    background-color: rgba(5, 5, 5, 0.884);
+    color:white;
+    padding: 15px;
+}
+.copyright{
+    background-color: rgb(36, 37, 36);
+    color: white;
+    text-align: center;
+    padding: 1px;
+}
+/* ************************************************** FIN FOOTER ************************************************** */
+
+
+
+/* ************************************************ INICIO HEADER ************************************************* */
+.logo{
+    display: flex;
+    max-height: 80px;
+    align-content: center;
+    justify-content: center;
+    padding: 10px;
+
+}
+.contenedor-redes{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: end;
+
+}
+.img-redes{
+    width: 20px;
+    margin-right: 20px;
+}
+
+/* ********************************************* FIN HEADER ********************************************************** */
+
+
+
+.opciones{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+}
+.opcion{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    padding: 10px;
+    margin: 20 px;
+    border: solid 2px;
+    border-radius: 20px;
+    justify-content: center;
+}
+
+.contenedor2{
+    width: 100%;
+    min-width: 320px;
+    margin: 90px 0px;
+    background-color: khaki;
+    margin-bottom: 30px;
+    display: flex;
+    padding: 10px;;
+}
+
+.contenedor2 .bloque1{
+    height: 200px;
+    min-width: 300px;;
+    width: 60%;
+}
+.contenedor2 img{
+    margin-left: 60px;
+    position: relative;
+}
+
+.contenedor1{
+    width: 100%;
+    max-width: 1000px;
+    min-width: 320px;
+    margin: 120px auto;
+    
+}
+.contenedor1 img{
+    width: 100%;
+}
+
+
+.contenedor100{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(30px,1fr));
+    grid-gap: 10px;
+    width: 100%; 
+    min-height: 300px;
+    flex-wrap: wrap;
+    margin: 100px 0px; /* ARRIBA/ABAJO + IZQ/DER */
+
+}
+
+
+.contenedor100 .seccion75{
+    background-color: rgb(197, 144, 94);
+    border:solid 1px ;
+}
+.contenedor100 .seccion50{
+    padding: 10px;
+    background-color: white;
+    border:solid 1px ;
+    border-radius: 10PX;
+}
+.contenedor100 .seccion25{
+    padding: 10px;
+    background-color: WHITE;
+    border:solid 1px ;
+}
+@media screen and (max-width:500px){
+    .contenedor{
+        grid-template:
+            "header header " 100px
+            "nav nav " 40px
+            "portada portada " 600px
+            "main main " auto
+            "aside aside" 100px
+            "footer footer " 200px/
+            50% auto;
+
+    }
+}
+        /*  esoy usando esto?????????? VERIFICAR */
+
+
+        .contenedor100{
+            flex-direction: column;
+        }
+        .contenedor100 .seccion75{
+            width: 100%;
+        }
+        .contenedor100 .seccion25{
+            width: 100%;
+        }
+        .contenedor2 img{
+            display: none;
+        }
+
+
+/* ********************************************* INICIO PAGE GALERIA ************************************************* */
+.fotos{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px;
+    justify-content: space-between;
+}
+
+.fotos img{
+    margin: 10px;
+    object-fit: cover;
+    object-position: center;
+    max-width: 120px;
+
+    @media screen and (min-width: 900px){
+        max-width: 300px;
+        height: 200px;
+        max-height: 200px;   
+        width: fit-content;
+    }
+   
+}
+
+
+/* ********************************************* FIN PAGE GALERIA ************************************************* */
+
+/* ********************************************* INICIO PAGE CONTACTO ********************************************* */
+.contenedor-contacto{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    padding: 10px;
+    margin: 0 auto;
+
+    @media screen and (min-width: 700px){ /* Doy prioridad a pantallas mobiles. Aplicar criterio al resto de los elementos anteriores */
+        grid-template-columns: 1fr 2fr;   
+        width:75%; 
+    }
+
+}
+.datos-empresa{
+    background-color: rgb(165, 156, 156);
+    border-radius: 10px;
+    padding: 10px;
+}
+.formulario{
+    background-color: rgb(165, 156, 156);
+    display: grid;
+    grid-gap: 20px;
+    padding: 10px 10px;
+    border-radius: 10px;   
+    @media screen and (min-width: 700px){
+        grid-template-columns: 1fr 1fr;
+        padding: 10px 60px;
+    } 
+}
+.formulario label, input{
+    display: block;
+}
+
+.anchoCompleto{
+    grid-column: 1/3;
+}
+.titulo-principal{
+    text-align: center;
+}
+button, textarea, input{
+    width: 100%;
+    padding: 5px;
+}
+
+/* ********************************************** FIN PAGE CONTACTO ********************************************** */
+
+/* ********************************************** FIN PAGE NOSOTROS ********************************************** */
+.contenedor-nosotros1{
+
+    background-color: midnightblue;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-gap: 10px;
+    padding: 30px;
+    @media screen and (min-width: 700px){
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+.contenedor-icono-texto{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr;
+    background-color: lawngreen;
+    padding: 10px;
+
+    @media screen and (min-width: 700px){
+        grid-template-columns: 1fr 4fr;
+       
+    }
+    
+}
+.icono{
+    display: grid;
+    grid-template-columns: 1fr;
+    display: block;
+    padding: 10px;
+    background-color: orangered;
+
+}
+
+.icono img{
+    align-items: center;
+    justify-content: center;
+    max-width: 70px;
+    position: relative;
+    top: 100px;
+    right: -260px;
+
+    @media screen and (min-width: 700px){
+
+        position: relative;
+        top: 0px;
+        right: 0px;;
+
+    
+    }
+    
+}
+
+.texto{
+    display: grid;
+    grid-template-columns: 4fr;
+    background-color: lightcoral;
+    padding: 10px;
+}
+.contenedor-nosotros1 .titulo-principal{
+    display: grid;
+    grid-column: 1/-1;
+    background-color: lightcoral;
+
+}
+
+
+
+/* ********************************************** FIN PAGE NOSOTROS ********************************************** */
