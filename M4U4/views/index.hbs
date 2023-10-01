@@ -1,0 +1,26 @@
+<h1>SESIONES EN EXPRESS</h1>
+<h2>{{title}}</h2>
+
+{{#if conocido}}
+    <p>Bienvenido {{nombre}}</p>
+
+    {{#if permitido}}
+        <p>Su edad es: {{edad}} y es mayor de edad</p>
+    {{/if}} 
+    {{#unless permitido}}
+        <p>Usted tiene {{edad}} años y no tiene permitido el ingreso</p>
+    {{/unless}}
+
+    <a href="/salir">Salir</a>
+
+{{/if}}    
+
+{{#unless conocido}}
+    <p>Usuario desconocido - Por favor inicie sesión</p>
+    <form action="/ingresar" method="post">
+        <input type="text" name="nombre" placeholder="Ingrese su nombre"></input><br>
+        <input type="number" name="edad" placeholder="Ingrese su edad" required="true"></input><br><br>
+        <button>INGRESAR</button>
+    </form>
+{{/unless}}
+
