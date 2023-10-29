@@ -1,0 +1,26 @@
+<div class="container">
+    <form action="/admin/login" method="post">
+            {{!-- USUARIO --}}
+            <h3>Probar con usuario "juan" o "victor" y pass="123" para logeo exitoso</h3>
+            <div class="input-group flex-nowrap">
+                <span class="input-group-text" id="addon-wrapping">USUARIO: </span>
+                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping" name="usuario">
+            </div>
+
+        {{!-- PASSWORD --}}
+            <div class="input-group flex-nowrap">
+                <span class="input-group-text" id="addon-wrapping">CONTRASEÑA: </span>
+
+                <div class="col-auto">
+                    <input type="password" placeholder="****" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline" name="password"> 
+                    {{!-- <input type="password" placeholder="Password" name="password"> --}}
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+</div>
+    
+    </form>
+
+{{#if error}}
+    <p>Usuario y/o contraseña incorrecto</p>
+{{/if}}
